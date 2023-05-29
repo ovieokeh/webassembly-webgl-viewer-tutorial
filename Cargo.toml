@@ -2,6 +2,10 @@
 name = "webassembly-webgl-viewer"
 version = "0.1.0"
 edition = "2021"
+authors = ["Ovie Okeh <kevinokeh@gmail.com>"]
+description = "A simple webgl viewer written in rust"
+license = "MIT"
+repository = "https://github.com/ovieokeh/webassembly-webgl-viewer-tutorial"
 
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
@@ -9,12 +13,19 @@ edition = "2021"
 crate-type = ["cdylib"]
 
 [dependencies]
-wasm-bindgen = "0.2"
+wasm-bindgen = "0.2.86"
+js-sys = "0.3"
 
 [dependencies.web-sys]
 version = "0.3"
 features = [
-  "Document",
-  "Window",
-  "WebGlRenderingContext",
+  'Document', 
+  'Window', 
+  'HtmlCanvasElement' ,
+  'WebGlRenderingContext', 
+  'WebGl2RenderingContext', 
+  'WebGlProgram', 
+  'WebGlShader', 
+  'WebGlBuffer', 
+  'WebGlUniformLocation'
 ]

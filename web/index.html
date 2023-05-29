@@ -1,0 +1,45 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>WebGL with Rust + WebAssembly</title>
+
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <canvas id="triangle" width="400" height="400"> </canvas>
+
+    <form id="color-changer">
+      <input
+        type="number"
+        id="red"
+        name="color"
+        placeholder="Red"
+        value="23"
+        min="0"
+        max="255"
+      />
+      <input
+        type="number"
+        id="green"
+        name="color"
+        placeholder="Green"
+        value="22"
+        min="0"
+        max="255"
+      />
+      <input
+        type="number"
+        id="blue"
+        name="color"
+        placeholder="Blue"
+        value="243"
+        min="0"
+        max="255"
+      />
+      <input type="submit" value="Change color" />
+    </form>
+
+    <script type="module" src="../pkg/webassembly_webgl_viewer.js"></script>
+    <script type="module" src="main.js"></script>
+  </body>
+</html>
